@@ -1,4 +1,4 @@
-# Tutorial How To Deploy a Complete NGINX, PHP, MONGODB/MYSQL and PHPMYADMIN service on your choice of OS platform. 
+# How To Deploy a Complete NGINX, PHP, MONGODB/MYSQL and PHPMYADMIN on your OS.
 
 ## Introduction - What is Docker ?
 
