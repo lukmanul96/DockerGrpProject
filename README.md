@@ -34,6 +34,21 @@ Docker Dashboard gives you a quick view of the containers running on your machin
 
 To access the dashboard, follow the instructions in the [Docker Desktop Manual](https://docs.docker.com/desktop/dashboard/ "Docker Desktop Manual"). If you open the dashboard now, you will see this tutorial running! The container name `(jolly_bouman)` below is a randomly created name. So, you’ll most likely have a different name.
 
+## What is a container?
+
+Now that you’ve run a container, what is a container? Simply put, a container is a sandboxed process on your machine that is isolated from all other processes on the host machine. That isolation leverages kernel namespaces and cgroups, features that have been in Linux for a long time. Docker has worked to make these capabilities approachable and easy to use. To summarize, a container:
+
+* is a runnable instance of an image. You can create, start, stop, move, or delete a container using the DockerAPI or CLI.
+* can be run on local machines, virtual machines or deployed to the cloud.
+* is portable (can be run on any OS)
+* Containers are isolated from each other and run their own software, binaries, and configurations.
+
+
+## What is a container image?
+
+When running a container, it uses an isolated filesystem. This custom filesystem is provided by a container image. Since the image contains the container’s filesystem, it must contain everything needed to run an application - all dependencies, configuration, scripts, binaries, etc. The image also contains other configuration for the container, such as environment variables, a default command to run, and other metadata.
+
+We’ll dive deeper into images later on, covering topics such as layering, best practices, and more.
 
 ### NGINX - ~~LUKMAN~~
 
