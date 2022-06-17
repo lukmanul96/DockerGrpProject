@@ -18,16 +18,16 @@ Some of the key features of Docker Desktop include:
 * Volume mounting for code and data, including file change notifications and easy access to running containers on the localhost network
 * In-container development and debugging with supported IDEs
 
-### NGINX - ~~LUKMAN
+### NGINX - ~~LUKMAN~~
 
 
-### 
+### PHP -
 
 
-### MONGODB / MYSQL - ~~JIANG
+### MONGODB / MYSQL - ~~JIANG~~
 
 
-### PHPMYADMIN
+### PHPMYADMIN - 
 
 
 **Our Teams**
