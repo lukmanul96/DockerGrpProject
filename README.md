@@ -8,15 +8,15 @@ Docker Desktop works with your choice of development tools and languages and giv
 
 Some of the key features of Docker Desktop include:
 
-*Ability to containerize and share any application on any cloud platform, in multiple languages and frameworks
-*Easy installation and setup of a complete Docker development environment
-*Includes the latest version of Kubernetes
-*Automatic updates to keep you up to date and secure
-*On Windows, the ability to toggle between Linux and Windows Server environments to build applications
-*Fast and reliable performance with native Windows Hyper-V virtualization
-*Ability to work natively on Linux through WSL 2 on Windows machines
-*Volume mounting for code and data, including file change notifications and easy access to running containers on the localhost network
-*In-container development and debugging with supported IDEs
+* Ability to containerize and share any application on any cloud platform, in multiple languages and frameworks
+* Easy installation and setup of a complete Docker development environment
+* Includes the latest version of Kubernetes
+* Automatic updates to keep you up to date and secure
+* On Windows, the ability to toggle between Linux and Windows Server environments to build applications
+* Fast and reliable performance with native Windows Hyper-V virtualization
+* Ability to work natively on Linux through WSL 2 on Windows machines
+* Volume mounting for code and data, including file change notifications and easy access to running containers on the localhost network
+* In-container development and debugging with supported IDEs
 
 
 * Required Installation steps and procedures
