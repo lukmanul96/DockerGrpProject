@@ -18,6 +18,23 @@ Some of the key features of Docker Desktop include:
 * Volume mounting for code and data, including file change notifications and easy access to running containers on the localhost network
 * In-container development and debugging with supported IDEs
 
+
+## Download and Install
+
+* [Install Docker Desktop on Windows](https://docs.docker.com/desktop/windows/install/ "Docker Desktop Windows")
+* [Install Docker Desktop on Mac](https://docs.docker.com/desktop/mac/install/ "Docker Desktop Mac")
+* [Install Docker Desktop on Linux](https://docs.docker.com/desktop/linux/install/ "Docker Desktop Linux")
+
+
+## Docker Dashboard
+
+<img width="1040" alt="tutorial-in-dashboard" src="https://user-images.githubusercontent.com/79176420/174413203-9a1ae020-7d9b-4f4d-9796-8de575c662c7.png">
+
+Docker Dashboard gives you a quick view of the containers running on your machine. The Docker Dashboard is available for Mac and Windows. It gives you quick access to container logs, lets you get a shell inside the container, and lets you easily manage container lifecycle (stop, remove, etc.).
+
+To access the dashboard, follow the instructions in the [Docker Desktop Manual](https://docs.docker.com/desktop/dashboard/ "Docker Desktop Manual"). If you open the dashboard now, you will see this tutorial running! The container name `(jolly_bouman)` below is a randomly created name. So, you’ll most likely have a different name.
+
+
 ### NGINX - ~~LUKMAN~~
 
 
