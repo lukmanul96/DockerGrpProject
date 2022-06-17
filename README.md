@@ -1,8 +1,6 @@
-Tutorial How to Install NGINX On Docker
+# H1 Tutorial How To Deploy a complete NGINX, PHP, MONGODB/MYSQL and PHPMYADMIN service on your choice of OS platform. 
 
-* all submission must include group members names with matric IDs, only one member in a group must submit
-
-* Introduction (introduce what docker is)
+## Introduction - What is Docker ?
 
 * Required Installation steps and procedures
 
@@ -11,3 +9,12 @@ Tutorial How to Install NGINX On Docker
 * Snapshot images of examples or examples
 
 * A sample run 
+
+
+
+| Team Members       | Matric No.           
+| ------------- |:-------------:|
+| Jiang Ao      | 1834913 | 
+| Muhammad Asyraf bin Anahar     | 2027199|   
+| Muhammad Lukmanulhakim| 2029299| 
+| Anas Fuad Abdo Mohammed | 2014265| 
