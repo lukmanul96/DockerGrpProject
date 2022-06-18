@@ -56,7 +56,20 @@ When running a container, it uses an isolated filesystem. This custom filesystem
 
 
 ### MONGODB / MYSQL - ~~JIANG~~
-1.
+1.Pull MySQL image<br>
+  "$ docker pull mysql:latest"
+<img width="1040" src="https://user-images.githubusercontent.com/101516004/174434911-c42a9f58-92d5-4bb4-9c25-7332c4aed0a8.png">
+2.Viewing a Local Mirror<br>
+  "$ docker images"
+<img width="1040" src="https://user-images.githubusercontent.com/101516004/174435008-cdc28c70-a059-40d6-9281-25dffe46fa45.png">
+3.Run container<br>
+  "$ docker run -itd --name mysql-test -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 mysql"<br>
+  ("MYSQL_ROOT_PASSWORD=123456": Set the password of user root of the MySQL service)<br><br>
+4.Check whether the installation is successful<br>
+  "$ docker ps"
+<img width="1040" src="https://user-images.githubusercontent.com/101516004/174435123-9e563178-54f3-490f-879f-559987308711.png">
+  The MySQL service can be accessed from the local machine using root and password 123456
+<img width="1040" src="https://www.runoob.com/wp-content/uploads/2016/06/docker-mysql7.png">
 
 ### PHPMYADMIN - 
 
