@@ -53,9 +53,8 @@ When running a container, it uses an isolated filesystem. This custom filesystem
 * Minimal working knowledge of docker
 * Knowledge about containerizatio
 
-### NGINX - ~~LUKMAN~~
 
-## NGINX - What is NGINX?
+### NGINX - What is NGINX?
 
 Nginx is a powerful, advanced web server we can use to serve a variety of content, such as static web pages and APIs. In this section, we’ll begin by creating a new Dockerfile with the required instructions for building and running the Nginx image.
 
@@ -83,7 +82,7 @@ Open your browser, then check the newly built server.
 ![72c10d6e-b194-45ba-9c42-d84451a74df3 (1)](https://user-images.githubusercontent.com/79176420/174462297-78087093-61fc-45d0-a38d-160b9b3c1bdc.png)
 
 
-### PHP - ~~Asyraf~~
+### PHP
 
 ## What is PHP?
 PHP is an open-source server-side scripting language that many devs use for web development. It is also a general-purpose language that you can use to make lots of projects, including Graphical User Interfaces (GUIs).
@@ -182,7 +181,7 @@ Now, open your web browser and access the URL http://your-server-ip. You should 
 ![image](https://user-images.githubusercontent.com/106312010/174487694-8e72e6e4-0361-47a9-a14e-ef3b41527260.png)
 
 
-### MONGODB / MYSQL - ~~JIANG~~
+### MYSQL
 1.Pull MySQL image<br>
   "$ docker pull mysql:latest"
 <img width="1040" src="https://user-images.githubusercontent.com/101516004/174434911-c42a9f58-92d5-4bb4-9c25-7332c4aed0a8.png">
@@ -198,7 +197,7 @@ Now, open your web browser and access the URL http://your-server-ip. You should 
   The MySQL service can be accessed from the local machine using root and password 123456
 <img width="1040" src="https://www.runoob.com/wp-content/uploads/2016/06/docker-mysql7.png">
 
-### PHPMYADMIN - Anas
+### PHPMYADMIN
  1.To test your Docker installation, open a terminal and run this command ($ docker version)
  2. to obtain a MySQL docker image, enter the following command ($ docker pull mysq1:8.0.1) 
  3. The previous command will download version 8.0.1 of mysql from the Docker store, allowing you to execute it on your local machine: $ docker run --name my-own-mysql -e MYSQL_ROOT_PASSWORD=mypass123 -d mysq1:8.0.1 
