@@ -90,10 +90,15 @@ PHP is an open-source server-side scripting language that many devs use for web 
 
 ## Create a PHP Container
 First, create a new directory inside your project with the following command:
+
 `mkdir -p ~/docker-project/www/html`
+
 Next, create an index.php file to verify your PHP version.
+
 `nano ~/docker-project/www/html/index.php`
+
 Add the following lines:
+
      `<!DOCTYPE html>  
      <head>  
       <title>Hello World!</title>
@@ -101,9 +106,13 @@ Add the following lines:
      <body>  
       <h1>Hello World!</h1>
       <p><?php echo 'We are running PHP, version: ' . phpversion(); ?></p>
-     </body>`   
+     </body>`
+     
  Save and close the file, then create a directory for Nginx inside your project directory:
+ 
 `mkdir ~/docker-project/nginx`
+
+
 
 
 
