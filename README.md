@@ -49,8 +49,9 @@ Now that you’ve run a container, what is a container? Simply put, a container 
 When running a container, it uses an isolated filesystem. This custom filesystem is provided by a container image. Since the image contains the container’s filesystem, it must contain everything needed to run an application - all dependencies, configuration, scripts, binaries, etc. The image also contains other configuration for the container, such as environment variables, a default command to run, and other metadata.
 
 ## Prerequisites
-* A fresh Ubuntu 20.04 server on the Atlantic.Net Cloud Platform
-* A root password configured on your server
+* Docker CE Installed
+* Minimal working knowledge of docker
+* Knowledge about containerizatio
 
 ### NGINX - ~~LUKMAN~~
 
@@ -175,10 +176,8 @@ You can verify the running containers with the following command:
 
 You should see the following output:
 
-`CONTAINER ID   IMAGE                  COMMAND                  CREATED          STATUS          PORTS                               NAMES
-82c8baf15221   docker-project_nginx   "/docker-entrypoint.…"   23 seconds ago   Up 22 seconds   0.0.0.0:80->80/tcp, :::80->80/tcp   nginx-container
-10778c6686d8   php:7.0-fpm            "docker-php-entrypoi…"   25 seconds ago   Up 23 seconds   9000/tcp                            php-container
-`
+<img width="1040" src="https://user-images.githubusercontent.com/106312010/174487458-44816931-fd8d-4fb6-98c3-a1aafb9cdae7.png">
+
 Now, open your web browser and access the URL http://your-server-ip. You should see your Hello World page:
 
 <img width="1040" src="https://www.atlantic.net/wp-content/uploads/2021/04/p2-1.png">
