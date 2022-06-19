@@ -112,6 +112,11 @@ Add the following lines:
  
 `mkdir ~/docker-project/nginx`
 
+Next, create an Nginx default configuration file to run your PHP application:
+
+`nano ~/docker-project/nginx/default.conf`
+
+
 
 
 
