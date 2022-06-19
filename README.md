@@ -51,6 +51,16 @@ When running a container, it uses an isolated filesystem. This custom filesystem
 
 ### NGINX - ~~LUKMAN~~
 
+## Using the NGINX Open Source Docker Image
+
+You can create an NGINX instance in a Docker container using the [NGINX Open Source Image](https://registry.hub.docker.com/_/nginx/ "NGINX Open Source Image") from Docker Hub.
+
+Let’s start with a very simple example. To launch an instance of NGINX running in a container and using the default NGINX configuration, run this command:
+
+`# docker run --name mynginx1 -p 80:80 -d nginx
+fcd1fb01b14557c7c9d991238f2558ae2704d129cf9fb97bb4fadf673a58580d`
+
+
 
 ### PHP - Asyraf
 
