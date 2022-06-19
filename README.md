@@ -89,48 +89,99 @@ Open your browser, then check the newly built server.
 PHP is an open-source server-side scripting language that many devs use for web development. It is also a general-purpose language that you can use to make lots of projects, including Graphical User Interfaces (GUIs).
 
 ## Create a PHP Container
+First, create a new directory inside your project with the following command:
 
-We will create a folder to save all the files here. Then cd into it and it will be used as our working directory.
+`mkdir -p ~/docker-project/www/html`
 
-`$ mkdir ~/docker
-$ cd ~/docker`
+Next, create an index.php file to verify your PHP version.
 
-We will use php-fpm to connect to Nginx webserver. Inside the php folder create a file named Dockerfile and put the following contents into it.
+`nano ~/docker-project/www/html/index.php`
 
-`FROM php:7.1-fpm-alpine3.4
-RUN apk update--no-cache 
-    && apk add--no-cache $PHPIZE_DEPS 
-    && apk add--no-cache mysql-dev 
-    && docker-php-ext-install pdo pdo_mysql`
-    
-We are using the Alpine version here. Alpine is a small distribution which targets the containers.
+Add the following lines:
 
-`$ docker build -t name-php php/`
+     `<!DOCTYPE html>  
+     <head>  
+      <title>Hello World!</title>
+     </head>  
 
-As mentioned above about the docker-compose yml configuration file, lets create the file
+     <body>  
+      <h1>Hello World!</h1>
+      <p><?php echo 'We are running PHP, version: ' . phpversion(); ?></p>
+     </body>`
+     
+Save and close the file, then create a directory for Nginx inside your project directory:
 
-`$ touch app/docker-compose.yml`
+`mkdir ~/docker-project/nginx`
 
-Put the following configurations into the file
+Next, create an Nginx default configuration file to run your PHP application:
 
-`version: '2'
-services:
-  php:
-    image: vultr-php
-    volumes:
-      -./:/app
-    working_dir: /app`
-    
-Orchestrate the containers using following commands
+`nano ~/docker-project/nginx/default.conf`
 
-`$ cd ~/docker/app
-$ docker-compose up -d`
+Add the following lines:
 
-To check that the php container executed. Use the following command:
+`server {  
+     listen 80 default_server;  
+     root /var/www/html;  
+     index index.html index.php;  
 
-`$ docker ps`
+     charset utf-8;  
 
+     location / {  
+      try_files $uri $uri/ /index.php?$query_string;  
+     }  
 
+     location = /favicon.ico { access_log off; log_not_found off; }  
+     location = /robots.txt { access_log off; log_not_found off; }  
+
+     access_log off;  
+     error_log /var/log/nginx/error.log error;  
+
+     sendfile off;  
+
+     client_max_body_size 100m;  
+
+     location ~ .php$ {  
+      fastcgi_split_path_info ^(.+.php)(/.+)$;  
+      fastcgi_pass php:9000;  
+      fastcgi_index index.php;  
+      include fastcgi_params;  
+      fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;  
+      fastcgi_intercept_errors off;  
+      fastcgi_buffer_size 16k;  
+      fastcgi_buffers 4 16k;  
+    }  
+
+     location ~ /.ht {  
+      deny all;  
+     }  
+    }
+`
+Next, create a Dockerfile inside the nginx directory. This will copy the Nginx default config file to the Nginx container.
+
+`nano ~/docker-project/nginx/Dockerfile`
+
+Next, edit the docker-compose.yml file:
+
+`nano ~/docker-project/docker-compose.yml`
+
+Now, launch the container with the following command:
+
+`cd ~/docker-project
+docker-compose up -d`
+
+You can verify the running containers with the following command:
+
+`docker ps`
+
+You should see the following output:
+
+`CONTAINER ID   IMAGE                  COMMAND                  CREATED          STATUS          PORTS                               NAMES
+82c8baf15221   docker-project_nginx   "/docker-entrypoint.…"   23 seconds ago   Up 22 seconds   0.0.0.0:80->80/tcp, :::80->80/tcp   nginx-container
+10778c6686d8   php:7.0-fpm            "docker-php-entrypoi…"   25 seconds ago   Up 23 seconds   9000/tcp                            php-container
+`
+Now, open your web browser and access the URL http://your-server-ip. You should see your Hello World page:
+
+<img width="1040" src="https://www.atlantic.net/wp-content/uploads/2021/04/p2-1.png">
 
 
 ### MONGODB / MYSQL - ~~JIANG~~
