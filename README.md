@@ -51,7 +51,7 @@ When running a container, it uses an isolated filesystem. This custom filesystem
 ## Prerequisites
 * Docker CE Installed
 * Minimal working knowledge of docker
-* Knowledge about containerizatio
+* Knowledge about containerization
 
 
 ### NGINX - What is NGINX?
@@ -182,32 +182,32 @@ Now, open your web browser and access the URL http://your-server-ip. You should 
 
 
 ### MYSQL
-1.Pull MySQL image<br>
-  "$ docker pull mysql:latest"
+1. Pull MySQL image<br>
+  `"$ docker pull mysql:latest"`
 <img width="1040" src="https://user-images.githubusercontent.com/101516004/174434911-c42a9f58-92d5-4bb4-9c25-7332c4aed0a8.png">
-2.Viewing a Local Mirror<br>
-  "$ docker images"
+2. Viewing a Local Mirror<br>
+  `"$ docker images"`
 <img width="1040" src="https://user-images.githubusercontent.com/101516004/174435008-cdc28c70-a059-40d6-9281-25dffe46fa45.png">
-3.Run container<br>
-  "$ docker run -itd --name mysql-test -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 mysql"<br>
-  ("MYSQL_ROOT_PASSWORD=123456": Set the password of user root of the MySQL service)<br><br>
-4.Check whether the installation is successful<br>
-  "$ docker ps"
+3. Run container<br>
+  `"$ docker run -itd --name mysql-test -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123456 mysql"`<br>
+  `("MYSQL_ROOT_PASSWORD=123456": Set the password of user root of the MySQL service)`<br><br>
+4. Check whether the installation is successful<br>
+  `$ docker ps`
 <img width="1040" src="https://user-images.githubusercontent.com/101516004/174435123-9e563178-54f3-490f-879f-559987308711.png">
   The MySQL service can be accessed from the local machine using root and password 123456
 <img width="1040" src="https://www.runoob.com/wp-content/uploads/2016/06/docker-mysql7.png">
 
 ### PHPMYADMIN
- 1.To test your Docker installation, open a terminal and run this command ($ docker version)
- 2. to obtain a MySQL docker image, enter the following command ($ docker pull mysq1:8.0.1) 
- 3. The previous command will download version 8.0.1 of mysql from the Docker store, allowing you to execute it on your local machine: $ docker run --name my-own-mysql -e MYSQL_ROOT_PASSWORD=mypass123 -d mysq1:8.0.1 
+ 1. To test your Docker installation, open a terminal and run this command `($ docker version)`
+ 2. to obtain a MySQL docker image, enter the following command `($ docker pull mysq1:8.0.1)` 
+ 3. The previous command will download version 8.0.1 of mysql from the Docker store, allowing you to execute it on your local machine: `$ docker run --name my-own-mysql -e MYSQL_ROOT_PASSWORD=mypass123 -d mysq1:8.0.1`
  4. If everything went well, you should be able to see the container running by typing the following command: $ docker ps -a 
- 5. you can test access to the MySQL instance using the docker exec command, as seen below: $ docker exec -it my-own-mysql bash To download the most recent stable version of the picture, use a terminal and enter the following: $ docker pull phpmyadmin/phpmyadmin:latest
- 6.  we need to run the container making sure that the container connects with the other container running mysql. In order to do so we type the following c. $ docker run --name my-own-phpmyadmin -d --link my-own-mysql:db -p 8081:80 phpmyadmin/phpmyadmin 
- 7.  $ docker ps -a
+ 5. You can test access to the MySQL instance using the docker exec command, as seen below: `$ docker exec -it my-own-mysql bash` To download the most recent stable version of the picture, use a terminal and enter the following: $ docker pull phpmyadmin/phpmyadmin:latest
+ 6. We need to run the container making sure that the container connects with the other container running mysql. In order to do so we type the following c. `$ docker run --name my-own-phpmyadmin -d --link my-own-mysql:db -p 8081:80 phpmyadmin/phpmyadmin`
+ 7. `$ docker ps -a`
  ![1](https://user-images.githubusercontent.com/107059995/174479430-ae7a84f9-5b24-4e66-a776-78272984352f.png)
 
- 8.   Open your preferred browser and enter the following address: http://localhost:8081/ As a result, your instance of phpfrlyAdmin will appear. To gain acce as the login and the password you created in step one when running the mysql container. 
+ 8. Open your preferred browser and enter the following address: http://localhost:8081/ As a result, your instance of phpfrlyAdmin will appear. To gain acce as the login and the password you created in step one when running the mysql container. 
  ![2](https://user-images.githubusercontent.com/107059995/174479270-f2121adf-769f-45d8-bc73-36a77e3ae8cd.png)
 
 
