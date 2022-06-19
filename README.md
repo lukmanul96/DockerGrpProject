@@ -48,6 +48,9 @@ Now that you’ve run a container, what is a container? Simply put, a container 
 
 When running a container, it uses an isolated filesystem. This custom filesystem is provided by a container image. Since the image contains the container’s filesystem, it must contain everything needed to run an application - all dependencies, configuration, scripts, binaries, etc. The image also contains other configuration for the container, such as environment variables, a default command to run, and other metadata.
 
+## Prerequisites
+* A fresh Ubuntu 20.04 server on the Atlantic.Net Cloud Platform
+* A root password configured on your server
 
 ### NGINX - ~~LUKMAN~~
 
@@ -80,13 +83,27 @@ Open your browser, then check the newly built server.
 
 
 
-
-
-
-### PHP - Asyraf
+### PHP - ~~Asyraf~~
 
 ## What is PHP?
 PHP is an open-source server-side scripting language that many devs use for web development. It is also a general-purpose language that you can use to make lots of projects, including Graphical User Interfaces (GUIs).
+
+## Create a PHP Container
+First, create a new directory inside your project with the following command:
+`mkdir -p ~/docker-project/www/html`
+Next, create an index.php file to verify your PHP version.
+`nano ~/docker-project/www/html/index.php`
+Add the following lines:
+     `<!DOCTYPE html>  
+     <head>  
+      <title>Hello World!</title>
+     </head>  
+     <body>  
+      <h1>Hello World!</h1>
+      <p><?php echo 'We are running PHP, version: ' . phpversion(); ?></p>
+     </body>`   
+ Save and close the file, then create a directory for Nginx inside your project directory:
+`mkdir ~/docker-project/nginx`
 
 
 
