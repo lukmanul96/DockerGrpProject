@@ -91,11 +91,11 @@ PHP is an open-source server-side scripting language that many devs use for web 
 ## Create a PHP Container
 First, create a new directory inside your project with the following command:
 
-`mkdir -p ~/docker-project/www/html`
+`$ mkdir -p ~/docker-project/www/html`
 
 Next, create an index.php file to verify your PHP version.
 
-`nano ~/docker-project/www/html/index.php`
+`$ nano ~/docker-project/www/html/index.php`
 
 Add the following lines:
 
@@ -111,11 +111,11 @@ Add the following lines:
      
 Save and close the file, then create a directory for Nginx inside your project directory:
 
-`mkdir ~/docker-project/nginx`
+`$ mkdir ~/docker-project/nginx`
 
 Next, create an Nginx default configuration file to run your PHP application:
 
-`nano ~/docker-project/nginx/default.conf`
+`$ nano ~/docker-project/nginx/default.conf`
 
 Add the following lines:
 
@@ -158,20 +158,20 @@ Add the following lines:
 `
 Next, create a Dockerfile inside the nginx directory. This will copy the Nginx default config file to the Nginx container.
 
-`nano ~/docker-project/nginx/Dockerfile`
+`$ nano ~/docker-project/nginx/Dockerfile`
 
 Next, edit the docker-compose.yml file:
 
-`nano ~/docker-project/docker-compose.yml`
+`$ nano ~/docker-project/docker-compose.yml`
 
 Now, launch the container with the following command:
 
-`cd ~/docker-project
+`$ cd ~/docker-project
 docker-compose up -d`
 
 You can verify the running containers with the following command:
 
-`docker ps`
+`$ docker ps`
 
 You should see the following output:
 
