@@ -83,7 +83,6 @@ Open your browser, then check the newly built server.
 ![72c10d6e-b194-45ba-9c42-d84451a74df3 (1)](https://user-images.githubusercontent.com/79176420/174462297-78087093-61fc-45d0-a38d-160b9b3c1bdc.png)
 
 
-
 ### PHP - ~~Asyraf~~
 
 ## What is PHP?
@@ -180,7 +179,7 @@ You should see the following output:
 
 Now, open your web browser and access the URL http://your-server-ip. You should see your Hello World page:
 
-<img width="1040" src="https://www.atlantic.net/wp-content/uploads/2021/04/p2-1.png">
+<img width="1040" src="https://https://user-images.githubusercontent.com/106312010/174487619-170a46a7-bd42-4542-9216-93467e5ba588.png">
 
 
 ### MONGODB / MYSQL - ~~JIANG~~
