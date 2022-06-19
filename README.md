@@ -179,7 +179,7 @@ You should see the following output:
 
 Now, open your web browser and access the URL http://your-server-ip. You should see your Hello World page:
 
-<img width="1040" src="https://https://user-images.githubusercontent.com/106312010/174487619-170a46a7-bd42-4542-9216-93467e5ba588.png">
+![image](https://user-images.githubusercontent.com/106312010/174487694-8e72e6e4-0361-47a9-a14e-ef3b41527260.png)
 
 
 ### MONGODB / MYSQL - ~~JIANG~~
