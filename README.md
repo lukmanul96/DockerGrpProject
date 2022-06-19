@@ -89,35 +89,46 @@ Open your browser, then check the newly built server.
 PHP is an open-source server-side scripting language that many devs use for web development. It is also a general-purpose language that you can use to make lots of projects, including Graphical User Interfaces (GUIs).
 
 ## Create a PHP Container
-First, create a new directory inside your project with the following command:
 
-`mkdir -p ~/docker-project/www/html`
+We will create a folder to save all the files here. Then cd into it and it will be used as our working directory.
 
-Next, create an index.php file to verify your PHP version.
+`$ mkdir ~/docker
+$ cd ~/docker`
 
-`nano ~/docker-project/www/html/index.php`
+We will use php-fpm to connect to Nginx webserver. Inside the php folder create a file named Dockerfile and put the following contents into it.
 
-Add the following lines:
+`FROM php:7.1-fpm-alpine3.4
+RUN apk update--no-cache 
+    && apk add--no-cache $PHPIZE_DEPS 
+    && apk add--no-cache mysql-dev 
+    && docker-php-ext-install pdo pdo_mysql`
+    
+We are using the Alpine version here. Alpine is a small distribution which targets the containers.
 
-     `<!DOCTYPE html>  
-     <head>  
-      <title>Hello World!</title>
-     </head>  
-     <body>  
-      <h1>Hello World!</h1>
-      <p><?php echo 'We are running PHP, version: ' . phpversion(); ?></p>
-     </body>`
-     
- Save and close the file, then create a directory for Nginx inside your project directory:
- 
-`mkdir ~/docker-project/nginx`
+`$ docker build -t name-php php/`
 
-Next, create an Nginx default configuration file to run your PHP application:
+As mentioned above about the docker-compose yml configuration file, lets create the file
 
-`nano ~/docker-project/nginx/default.conf`
+`$ touch app/docker-compose.yml`
 
+Put the following configurations into the file
 
+`version: '2'
+services:
+  php:
+    image: vultr-php
+    volumes:
+      -./:/app
+    working_dir: /app`
+    
+Orchestrate the containers using following commands
 
+`$ cd ~/docker/app
+$ docker-compose up -d`
+
+To check that the php container executed. Use the following command:
+
+`$ docker ps`
 
 
 
@@ -150,7 +161,6 @@ Next, create an Nginx default configuration file to run your PHP application:
 
  8.   Open your preferred browser and enter the following address: http://localhost:8081/ As a result, your instance of phpfrlyAdmin will appear. To gain acce as the login and the password you created in step one when running the mysql container. 
  ![2](https://user-images.githubusercontent.com/107059995/174479270-f2121adf-769f-45d8-bc73-36a77e3ae8cd.png)
-
 
 
 
