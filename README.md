@@ -51,6 +51,10 @@ When running a container, it uses an isolated filesystem. This custom filesystem
 
 ### NGINX - ~~LUKMAN~~
 
+## NGINX - What is NGINX?
+
+Nginx is a powerful, advanced web server we can use to serve a variety of content, such as static web pages and APIs. In this section, we’ll begin by creating a new Dockerfile with the required instructions for building and running the Nginx image.
+
 ## Using the NGINX Open Source Docker Image
 
 You can create an NGINX instance in a Docker container using the [NGINX Open Source Image](https://registry.hub.docker.com/_/nginx/ "NGINX Open Source Image") from Docker Hub.
@@ -59,6 +63,23 @@ Let’s start with a very simple example. To launch an instance of NGINX running
 
 `# docker run --name mynginx1 -p 80:80 -d nginx
 fcd1fb01b14557c7c9d991238f2558ae2704d129cf9fb97bb4fadf673a58580d`
+
+Break this down:
+
+* the run sub-command specifies that we want to run the container
+* the -d flag indicates that we want to run the image in detached mode
+* the -p option signifies the port number in the format local-port:container-port. In this case, we are mapping port 80 in the container to port 80 on the server
+* the final argument nginx specifies the tag of the image we want to run
+
+We’re done at this point. Let’s see the status of our Docker image: ![Screenshot 2022-06-19 at 09 39 19](https://user-images.githubusercontent.com/79176420/174462339-6c945a26-a7c8-4d72-8cac-2c7d3f48318a.png)
+
+
+Open your browser, then check the newly built server.
+
+![72c10d6e-b194-45ba-9c42-d84451a74df3 (1)](https://user-images.githubusercontent.com/79176420/174462297-78087093-61fc-45d0-a38d-160b9b3c1bdc.png)
+
+
+
 
 
 
